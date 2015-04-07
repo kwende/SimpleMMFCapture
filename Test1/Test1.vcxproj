@@ -94,7 +94,9 @@
     <ClCompile Include="SimpleMMFCapture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\feynman.jpg" />
+    <Image Include="..\feynman.jpg">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -364,7 +364,7 @@ void main(void)
         printf("Initial COM runtime success\n");
 
         /* Connect camera */
-        IplImage *img = ::cvLoadImage("C:/Users/brush/Desktop/sddefault.jpg");
+        IplImage *img = ::cvLoadImage("C:/repos/SimpleMMFCapture/feynman.jpg");
         CvCapture *cap = cvCaptureFromCAM(0);
         IplImage *g_img = cvCreateImage(cvSize(640, 480), 8, 1);
 
@@ -376,7 +376,8 @@ void main(void)
 
         /* Create video */
         c_WriteAVI.CreateVideo(lpFileName,
-            MFVideoFormat_WMV3,
+            //MFVideoFormat_WMV3,
+            MFVideoFormat_RGB24,
             800000,
             640,
             480,
