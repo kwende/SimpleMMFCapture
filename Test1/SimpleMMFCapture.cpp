@@ -364,7 +364,7 @@ void main(void)
         printf("Initial COM runtime success\n");
 
         /* Connect camera */
-        IplImage *img;
+        IplImage *img = ::cvLoadImage("C:/Users/brush/Desktop/sddefault.jpg");
         CvCapture *cap = cvCaptureFromCAM(0);
         IplImage *g_img = cvCreateImage(cvSize(640, 480), 8, 1);
 
@@ -387,7 +387,8 @@ void main(void)
         while (TRUE)
         {
             /* Get image */
-            img = cvQueryFrame(cap);
+            //img = cvQueryFrame(cap);
+            //IplImage *img = cvCreateImage(cvSize(640, 480), 8, 3);
             if (img != NULL)
             {
                 /* Convert gray image */
